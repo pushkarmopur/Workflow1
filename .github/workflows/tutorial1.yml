@@ -6,8 +6,13 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Job1 running"
-      - run: date
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - run: python --version
+      - run: pip --version
 
   job2:
     runs-on: ubuntu-latest
@@ -22,6 +27,7 @@ jobs:
       - run: date
 
   job4:
+    needs: [job1, job2]
     runs-on: ubuntu-latest
     steps:
       - run: echo "I am job 4"
