@@ -1,0 +1,22 @@
+name: My First Workflow
+
+on: [push]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "Hello from Job 1"
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "Hello from Job 2"
+
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "Hello from Job 3"
