@@ -6,17 +6,22 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Print message
-        run: echo "Hello from Job 1"
+      - run: echo "Job1 running"
+      - run: date
 
   job2:
     runs-on: ubuntu-latest
     steps:
-      - name: Print message
-        run: echo "Hello from Job 2"
+      - run: echo "Job2 running"
+      - run: date
 
   job3:
     runs-on: ubuntu-latest
     steps:
-      - name: Print message
-        run: echo "Hello from Job 3"
+      - run: echo "Job3 running"
+      - run: date
+
+  job4:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I am job 4"
